@@ -4929,6 +4929,21 @@ public final class Settings {
         private static final Validator DOUBLE_TAP_SLEEP_LOCKSCREEN_VALIDATOR =
                 BOOLEAN_VALIDATOR;
 
+        /**
+         * media artwork wallpaper blur level on lockscreen
+         * @hide
+         */
+        public static final String OMNI_LOCKSCREEN_MEDIA_BLUR = "lockscreen_media_blur";
+
+        private static final Validator OMNI_LOCKSCREEN_MEDIA_BLUR_VALIDATOR =
+                ANY_INTEGER_VALIDATOR;
+
+        /**
+         * IMPORTANT: If you add a new public settings you also have to add it to
+         * PUBLIC_SETTINGS below. If the new setting is hidden you have to add
+         * it to PRIVATE_SETTINGS below. Also add a validator that can validate
+         * the setting value. See an example above.
+         */
 
         /**
          * Settings to backup. This is here so that it's in the same place as the settings
@@ -5013,6 +5028,7 @@ public final class Settings {
             OMNI_QS_TILE_TITLE_VISIBILITY,
             OMNI_QS_LAYOUT_ROWS_LANDSCAPE,
             OMNI_QS_LAYOUT_ROWS,
+            OMNI_LOCKSCREEN_MEDIA_BLUR,
             POWERMENU_SOUNDPANEL,
             POWERMENU_SCREENSHOT,
             POWERMENU_SETTINGS,
@@ -5168,6 +5184,7 @@ public final class Settings {
             PRIVATE_SETTINGS.add(FORCE_FULLSCREEN_CUTOUT_APPS);
             PRIVATE_SETTINGS.add(OMNI_QS_LAYOUT_COLUMNS_LANDSCAPE);
             PRIVATE_SETTINGS.add(OMNI_QS_LAYOUT_COLUMNS);
+            PRIVATE_SETTINGS.add(OMNI_LOCKSCREEN_MEDIA_BLUR);
             PRIVATE_SETTINGS.add(OMNI_QS_TILE_TITLE_VISIBILITY);
             PRIVATE_SETTINGS.add(OMNI_QS_LAYOUT_ROWS_LANDSCAPE);
             PRIVATE_SETTINGS.add(OMNI_QS_LAYOUT_ROWS);
@@ -5306,6 +5323,7 @@ public final class Settings {
             VALIDATORS.put(OMNI_QS_LAYOUT_ROWS_LANDSCAPE,
                     OMNI_QS_LAYOUT_ROWS_LANDSCAPE_VALIDATOR);
             VALIDATORS.put(OMNI_QS_LAYOUT_ROWS, OMNI_QS_LAYOUT_ROWS_VALIDATOR);
+            VALIDATORS.put(OMNI_LOCKSCREEN_MEDIA_BLUR, OMNI_LOCKSCREEN_MEDIA_BLUR_VALIDATOR);
             VALIDATORS.put(POWERMENU_SOUNDPANEL, POWERMENU_SOUNDPANEL_VALIDATOR);
             VALIDATORS.put(POWERMENU_SCREENSHOT, POWERMENU_SCREENSHOT_VALIDATOR);
             VALIDATORS.put(POWERMENU_SETTINGS, POWERMENU_SETTINGS_VALIDATOR);
