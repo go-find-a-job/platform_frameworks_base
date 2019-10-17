@@ -4682,6 +4682,16 @@ public final class Settings {
         /** @hide */
         private static final Validator FORCE_FULLSCREEN_CUTOUT_APPS_VALIDATOR = ANY_STRING_VALIDATOR;
 
+
+        /**
+         * Whether footer #DerpFest text shows
+         * @hide
+         */
+        public static final String DERP_FOOTER_TEXT_SHOW = "derp_footer_text_show";
+         /** @hide */
+        private static final Validator DERP_FOOTER_TEXT_SHOW_VALIDATOR =
+                BOOLEAN_VALIDATOR;
+
         /**
          * Number of qs columns on landscape orientation
          * @hide
